@@ -1,0 +1,21 @@
+def find_largest_smallest():
+    numbers = []  
+    while True:
+        num = int(input("Enter a number (-1 to stop): ")) 
+        if num == -1:  # If -1 is entered, break the loop
+            break
+        numbers.append(num)  
+    if len(numbers) > 0:  # Check if any numbers were entered
+        largest = numbers[0]  
+        smallest = numbers[0]  
+
+        for num in numbers: 
+            if num > largest:
+                largest = num  
+            if num < smallest:
+                smallest = num  
+        print("Largest number:", largest)
+        print("Smallest number:", smallest)
+    else:
+        print("No numbers were entered.") 
+find_largest_smallest()
