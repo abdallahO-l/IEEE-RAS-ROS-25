@@ -1,0 +1,12 @@
+def sum_of_evens():
+    n = int(input("Enter a positive number: "))  
+    total = 0  
+    i = 2  # First even number
+
+    while i <= n:
+        total = total + i  
+        i = i + 2 
+
+    print("Sum of even numbers:", total)
+
+sum_of_evens()
