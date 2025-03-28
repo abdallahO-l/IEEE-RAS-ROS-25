@@ -1,0 +1,12 @@
+library_catalogue = {}
+num_books = int(input("How many books do you want to add? "))
+for _ in range(num_books):
+    title = input("Enter book title: ")
+    author = input("Enter author's name: ")
+    year = input("Enter publication year: ")
+    library_catalogue[title] = {"author": author, "year": year}
+
+# Display the catalog
+print("\nLibrary Catalogue:")
+for title, details in library_catalogue.items():
+    print(f"Title: {title}, Author: {details['author']}, Year: {details['year']}")
