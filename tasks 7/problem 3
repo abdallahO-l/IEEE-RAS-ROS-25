@@ -1,0 +1,36 @@
+class BankAccount:
+    def __init__(self, accountNumber, name, balance):
+        self.accountNumber = accountNumber
+        self.name = name
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
+            print("Not enough money in the account!")
+
+    def apply_bank_fees(self):
+        self.balance -= self.balance * 0.05
+
+    def display(self):
+        print("Account Number:", self.accountNumber)
+        print("Account Name:", self.name)
+        print("Account Balance:", self.balance, "$")
+
+
+
+account = BankAccount(2178514584, "Ahmed", 2600)
+
+
+account.display()
+
+
+account.deposit(500)  # Deposit 500 $
+account.withdraw(200)  # Withdraw 200 $
+account.apply_bank_fees()  # Apply 5% bank fees
+
+account.display()
